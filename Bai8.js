@@ -4,9 +4,10 @@ function Play() {
     let  number = parseInt(prompt("Nhập số bạn đoán:"));
     let life = 3;
     let randomnumber = Math.round(Math.random()*(b-a)+a);
-    for(var i = life;i>=0;i--)
+    console.log(randomnumber);
+    for(var i = 3;i>=0;i--)
     {
-        if(i==0)
+        if(life==0)
         {
             alert("You Loose!Play Again!");
             break;
@@ -19,7 +20,8 @@ function Play() {
         else
         {
             alert("Wrong!");
-            alert("Please try again! You have "+i+" life");
+            life--;
+            alert("Please try again! You have "+life+" life");
             number = parseInt(prompt("Nhập số bạn đoán:"));
         }
     }
